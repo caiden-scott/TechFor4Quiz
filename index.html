@@ -75,42 +75,42 @@
 </div>
 
 <script>
-  const questions = [
-    { question: "What's your ideal weekend?", options: [
-      { text: "Hiking in nature", points: 3 },
-      { text: "Netflix binge", points: 1 },
-      { text: "Party with friends", points: 4 },
-      { text: "Reading a book", points: 2 },
+ const questions = [
+    { question: "How do you feel about working in a team?", options: [
+      { text: "I love working in teams, as long as I'm team leader!", points: 4 },
+      { text: "As long as it's a small team and we all work collaboratively, I'm good.", points: 3 },
+      { text: "I don't like making the decisions, but I rock any assignment given to me!", points: 2 },
+      { text: "I work best independently.", points: 1 },
     ]},
-    { question: "Pick a pet:", options: [
-      { text: "Dog", points: 4 },
-      { text: "Cat", points: 2 },
-      { text: "Parrot", points: 3 },
-      { text: "Fish", points: 1 },
+    { question: "Pick a tech career:", options: [
+      { text: "ITS Professor", points: 2 },
+      { text: "IT Project Manager", points: 4 },
+      { text: "Content Creator", points: 3 },
+      { text: "Tech Support", points: 1 },
     ]},
-    { question: "Choose a color:", options: [
-      { text: "Blue", points: 2 },
-      { text: "Red", points: 4 },
-      { text: "Green", points: 3 },
-      { text: "Black", points: 1 },
+    { question: "Rate your problem-solving skills, 1 being the worst:", options: [
+      { text: "1: I'm more helpful in the brainstorming phase than the debugging phase of projects.", points: 4 },
+      { text: "2: I can find a workaround in a program I'm familiar with, but broad problem-solving is not my thing.", points: 3 },
+      { text: "3 : As long as I know the topic beforehand, I can be ready to troubleshoot pretty much anything!", points: 2 },
+      { text: "4: Give me a computer with Internet access and 30 minutes and I can crack any puzzle!", points: 1 },
     ]},
-    { question: "What’s your favorite meal?", options: [
-      { text: "Pizza", points: 4 },
-      { text: "Salad", points: 2 },
-      { text: "Steak", points: 3 },
-      { text: "Pasta", points: 1 },
+    { question: "How innovative are you?", options: [
+      { text: "Not very, but what I lack in innovation, I make up for in other forms of creativity.", points: 3 },
+      { text: "Not at all - I may not be the idea guy, but I'm a fantastic worker bee.", points: 2 },
+      { text: "Extremely! My creative ideas know no bounds.", points: 4 },
+      { text: "Very - I constantly innovate new solutions to problems on the fly.", points: 1 },
     ]},
-    { question: "Pick a vacation spot:", options: [
-      { text: "Paris", points: 3 },
-      { text: "Mountains", points: 2 },
-      { text: "New York", points: 4 },
-      { text: "Beach", points: 1 },
+    { question: "Are you a people-person?:", options: [
+      { text: "Nope!", points: 3 },
+      { text: "Absolutely!", points: 2 },
+      { text: "I'm a coworker-people-person more than I am a public-people-person.", points: 4 },
+      { text: "I can talk to people one-on-one, but large groups are overwhelming.", points: 1 },
     ]},
-    { question: "What motivates you?", options: [
-      { text: "Success", points: 4 },
-      { text: "Helping others", points: 3 },
-      { text: "Peace of mind", points: 2 },
-      { text: "Avoiding failure", points: 1 },
+    { question: "Which gives you the biggest feeling of accomplishment?", options: [
+      { text: "Seeing a program you built from the ground up take off", points: 4 },
+      { text: "Completing all of your daily deliverables early", points: 3 },
+      { text: "Watching your student understand and solve the problem the way you taught them to", points: 2 },
+      { text: "Solving a complicated problem", points: 1 },
     ]},
     { question: "How do you handle conflict?", options: [
       { text: "Confront it", points: 4 },
@@ -118,17 +118,17 @@
       { text: "Avoid it", points: 1 },
       { text: "Think it over", points: 2 },
     ]},
-    { question: "Pick a movie genre:", options: [
-      { text: "Comedy", points: 4 },
-      { text: "Drama", points: 2 },
-      { text: "Horror", points: 1 },
-      { text: "Action", points: 3 },
+    { question: "Your parent/guardian cannot figure out how to set up an Apple Shortcut on their phone. What do you do?:", options: [
+      { text: "You know someone who is great with Shortcuts - you'll send your parent/guardian to them for help.", points: 4 },
+      { text: "Find a YouTube tutorial for them to follow and sit with them if they have questions.", points: 2 },
+      { text: "Sit down with them and teach them step by step how to set one up.", points: 1 },
+      { text: "Go on a research deep-dive and send them everything you find that could help.", points: 3 },
     ]},
     { question: "Your friends describe you as:", options: [
       { text: "Leader", points: 4 },
-      { text: "Loyal", points: 2 },
+      { text: "Friendly", points: 2 },
       { text: "Creative", points: 3 },
-      { text: "Chill", points: 1 },
+      { text: "Analytical", points: 1 },
     ]},
     { question: "Choose a hobby:", options: [
       { text: "Writing", points: 2 },
