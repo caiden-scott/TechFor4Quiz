@@ -168,15 +168,15 @@
       return;
     }
 
-    let resultText = "";
-    if (total <= 15) {
-      resultText = "You're a calm and introspective soul 🌙";
-    } else if (total <= 25) {
-      resultText = "You're a creative and thoughtful dreamer 🎨";
-    } else if (total <= 35) {
-      resultText = "You're energetic and ambitious 🚀";
+   let resultText = "";
+    if (total <= 13) {
+      resultText = "You would be an amazing Mentor!";
+    } else if (total <= 23) {
+      resultText = "You would be a fantastic Training Assistant!"";
+    } else if (total <= 33) {
+      resultText = "You would be a stellar Content Contributor!";
     } else {
-      resultText = "You're a bold and fearless leader 💥";
+      resultText = "You would be an awesome Project Advisor!";
     }
 
     document.getElementById("result").textContent = resultText;
