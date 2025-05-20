@@ -112,11 +112,11 @@
       { text: "Watching your student understand and solve the problem the way you taught them to", points: 2 },
       { text: "Solving a complicated problem", points: 1 },
     ]},
-    { question: "How do you handle conflict?", options: [
-      { text: "Confront it", points: 4 },
-      { text: "Talk it out", points: 3 },
-      { text: "Avoid it", points: 1 },
-      { text: "Think it over", points: 2 },
+    { question: "How organized are you??", options: [
+      { text: "I am a ridiculously well-organized person, and my label-maker can attest to that.", points: 3 },
+      { text: "My files are in chronological then alphabetical order, but my desktop is covered in random sticky notes.", points: 2 },
+      { text: "My organizational system makes sense to me! I can't say it makes sense to anyone else, though.", points: 4 },
+      { text: "The only things in my life that are organized are my thoughts.", points: 1 },
     ]},
     { question: "Your parent/guardian cannot figure out how to set up an Apple Shortcut on their phone. What do you do?", options: [
       { text: "You know someone who is great with Shortcuts - you'll send your parent/guardian to them for help.", points: 4 },
@@ -130,11 +130,11 @@
       { text: "Creative", points: 3 },
       { text: "Analytical", points: 1 },
     ]},
-    { question: "Choose a hobby:", options: [
-      { text: "Writing", points: 2 },
-      { text: "Dancing", points: 4 },
-      { text: "Gaming", points: 1 },
-      { text: "Photography", points: 3 },
+    { question: "How passionate are you about teaching others about technology?", options: [
+      { text: "Extremely passionate! People of all ages need to know about technology that can make their lives better.", points: 2 },
+      { text: "Pretty passionate - I may not be the best teacher, but I have a lot of ideas on how to increase digital literacy in our communities.", points: 4 },
+      { text: "Fairly passionate - when someone presents a problem to me that can be solved by technology, I share it with them.", points: 1 },
+      { text: "Not very passionate, but I know enough about technology that I could help increase digital literacy in our community in other ways.", points: 3 },
     ]},
   ];
 
@@ -170,13 +170,15 @@
 
   let resultText = "";
     if (total <= 13) {
-      resultText = "You would be an amazing Mentor!";
+      resultText = "You would be an amazing Mentor!" <br /> "Mentors pair with participants to offer one-on-one guidance in areas such as computer literacy, coding, or digital design.";
     } else if (total <= 23) {
-      resultText = "You would be a fantastic Training Assistant!"";
+      resultText = "You would be a fantastic Training Assistant!" <br /> "Training Assistants support Digital Navigators in running workshops, answering questions, or helping participants troubleshoot."
+;
     } else if (total <= 33) {
-      resultText = "You would be a stellar Content Contributor!";
+      resultText = "You would be a stellar Content Contributor!" <br /> "Content Contributors develop or refine curriculum and resources (e.g., creating guides, or translating materials).
+";
     } else {
-      resultText = "You would be an awesome Project Advisor!";
+      resultText = "You would be an awesome Project Advisor!" <br /> "Project Advisors provide expertise on specialized projects like AI for Seniors or Youth Digital Engagement initiatives.";
     }
 
     document.getElementById("result").textContent = resultText;
