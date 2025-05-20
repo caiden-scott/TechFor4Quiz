@@ -64,126 +64,125 @@
   </style>
 </head>
 <body>
-
-<div class="quiz-container">
-  <h1>What Type of Tech for 4 Volunteer Should You Be?</h1>
-  <form id="quizForm">
-    <!-- Questions will be inserted here by JavaScript -->
-  </form>
-  <button id="submit">Get My Result</button>
-  <div id="result"></div>
-</div>
-
-<script>
- const questions = [
-    { question: "How do you feel about working in a team?", options: [
-      { text: "I love working in teams, as long as I'm team leader!", points: 4 },
-      { text: "As long as it's a small team and we all work collaboratively, I'm good.", points: 3 },
-      { text: "I don't like making the decisions, but I rock any assignment given to me!", points: 2 },
-      { text: "I work best independently.", points: 1 },
-    ]},
-    { question: "Pick a tech career:", options: [
-      { text: "ITS Professor", points: 2 },
-      { text: "IT Project Manager", points: 4 },
-      { text: "Content Creator", points: 3 },
-      { text: "Tech Support", points: 1 },
-    ]},
-    { question: "Rate your problem-solving skills, 1 being the worst:", options: [
-      { text: "1: I'm more helpful in the brainstorming phase than the debugging phase of projects.", points: 4 },
-      { text: "2: I can find a workaround in a program I'm familiar with, but broad problem-solving is not my thing.", points: 3 },
-      { text: "3 : As long as I know the topic beforehand, I can be ready to troubleshoot pretty much anything!", points: 2 },
-      { text: "4: Give me a computer with Internet access and 30 minutes and I can crack any puzzle!", points: 1 },
-    ]},
-    { question: "How innovative are you?", options: [
-      { text: "Not very, but what I lack in innovation, I make up for in other forms of creativity.", points: 3 },
-      { text: "Not at all - I may not be the idea guy, but I'm a fantastic worker bee.", points: 2 },
-      { text: "Extremely! My creative ideas know no bounds.", points: 4 },
-      { text: "Very - I constantly innovate new solutions to problems on the fly.", points: 1 },
-    ]},
-    { question: "Are you a people-person?", options: [
-      { text: "Nope!", points: 3 },
-      { text: "Absolutely!", points: 2 },
-      { text: "I'm a coworker-people-person more than I am a public-people-person.", points: 4 },
-      { text: "I can talk to people one-on-one, but large groups are overwhelming.", points: 1 },
-    ]},
-    { question: "Which gives you the biggest feeling of accomplishment?", options: [
-      { text: "Seeing a program you built from the ground up take off", points: 4 },
-      { text: "Completing all of your daily deliverables early", points: 3 },
-      { text: "Watching your student understand and solve the problem the way you taught them to", points: 2 },
-      { text: "Solving a complicated problem", points: 1 },
-    ]},
-    { question: "How organized are you??", options: [
-      { text: "I am a ridiculously well-organized person, and my label-maker can attest to that.", points: 3 },
-      { text: "My files are in chronological then alphabetical order, but my desktop is covered in random sticky notes.", points: 2 },
-      { text: "My organizational system makes sense to me! I can't say it makes sense to anyone else, though.", points: 4 },
-      { text: "The only things in my life that are organized are my thoughts.", points: 1 },
-    ]},
-    { question: "Your parent/guardian cannot figure out how to set up an Apple Shortcut on their phone. What do you do?", options: [
-      { text: "You know someone who is great with Shortcuts - you'll send your parent/guardian to them for help.", points: 4 },
-      { text: "Find a YouTube tutorial for them to follow and sit with them if they have questions.", points: 2 },
-      { text: "Sit down with them and teach them step by step how to set one up.", points: 1 },
-      { text: "Go on a research deep-dive and send them everything you find that could help.", points: 3 },
-    ]},
-    { question: "Your friends describe you as:", options: [
-      { text: "Leader", points: 4 },
-      { text: "Friendly", points: 2 },
-      { text: "Creative", points: 3 },
-      { text: "Analytical", points: 1 },
-    ]},
-    { question: "How passionate are you about teaching others about technology?", options: [
-      { text: "Extremely passionate! People of all ages need to know about technology that can make their lives better.", points: 2 },
-      { text: "Pretty passionate - I may not be the best teacher, but I have a lot of ideas on how to increase digital literacy in our communities.", points: 4 },
-      { text: "Fairly passionate - when someone presents a problem to me that can be solved by technology, I share it with them.", points: 1 },
-      { text: "Not very passionate, but I know enough about technology that I could help increase digital literacy in our community in other ways.", points: 3 },
-    ]},
-  ];
-
-  const form = document.getElementById("quizForm");
-
-  questions.forEach((q, index) => {
-    const div = document.createElement("div");
-    div.classList.add("question");
-    div.innerHTML = `<h3>Q${index + 1}: ${q.question}</h3>`;
-    const optionsDiv = document.createElement("div");
-    optionsDiv.classList.add("options");
-    q.options.forEach((opt, i) => {
-      const name = `question${index}`;
-      const id = `${name}_opt${i}`;
-      optionsDiv.innerHTML += `
-        <input type="radio" name="${name}" id="${id}" value="${opt.points}">
-        <label for="${id}">${opt.text}</label>
-      `;
+  <div class="quiz-container">
+    <h1>What Type of Tech for 4 Volunteer Should You Be?</h1>
+    <form id="quizForm">
+      <!-- Questions will be inserted here by JavaScript -->
+    </form>
+    <button id="submit">Get My Result</button>
+    <div id="result"></div>
+  </div>
+  
+  <script>
+   const questions = [
+      { question: "How do you feel about working in a team?", options: [
+        { text: "I love working in teams, as long as I'm team leader!", points: 4 },
+        { text: "As long as it's a small team and we all work collaboratively, I'm good.", points: 3 },
+        { text: "I don't like making the decisions, but I rock any assignment given to me!", points: 2 },
+        { text: "I work best independently.", points: 1 },
+      ]},
+      { question: "Pick a tech career:", options: [
+        { text: "ITS Professor", points: 2 },
+        { text: "IT Project Manager", points: 4 },
+        { text: "Content Creator", points: 3 },
+        { text: "Tech Support", points: 1 },
+      ]},
+      { question: "Rate your problem-solving skills, 1 being the worst:", options: [
+        { text: "1: I'm more helpful in the brainstorming phase than the debugging phase of projects.", points: 4 },
+        { text: "2: I can find a workaround in a program I'm familiar with, but broad problem-solving is not my thing.", points: 3 },
+        { text: "3 : As long as I know the topic beforehand, I can be ready to troubleshoot pretty much anything!", points: 2 },
+        { text: "4: Give me a computer with Internet access and 30 minutes and I can crack any puzzle!", points: 1 },
+      ]},
+      { question: "How innovative are you?", options: [
+        { text: "Not very, but what I lack in innovation, I make up for in other forms of creativity.", points: 3 },
+        { text: "Not at all - I may not be the idea guy, but I'm a fantastic worker bee.", points: 2 },
+        { text: "Extremely! My creative ideas know no bounds.", points: 4 },
+        { text: "Very - I constantly innovate new solutions to problems on the fly.", points: 1 },
+      ]},
+      { question: "Are you a people-person?", options: [
+        { text: "Nope!", points: 3 },
+        { text: "Absolutely!", points: 2 },
+        { text: "I'm a coworker-people-person more than I am a public-people-person.", points: 4 },
+        { text: "I can talk to people one-on-one, but large groups are overwhelming.", points: 1 },
+      ]},
+      { question: "Which gives you the biggest feeling of accomplishment?", options: [
+        { text: "Seeing a program you built from the ground up take off", points: 4 },
+        { text: "Completing all of your daily deliverables early", points: 3 },
+        { text: "Watching your student understand and solve the problem the way you taught them to", points: 2 },
+        { text: "Solving a complicated problem", points: 1 },
+      ]},
+      { question: "How organized are you??", options: [
+        { text: "I am a ridiculously well-organized person, and my label-maker can attest to that.", points: 3 },
+        { text: "My files are in chronological then alphabetical order, but my desktop is covered in random sticky notes.", points: 2 },
+        { text: "My organizational system makes sense to me! I can't say it makes sense to anyone else, though.", points: 4 },
+        { text: "The only things in my life that are organized are my thoughts.", points: 1 },
+      ]},
+      { question: "Your parent/guardian cannot figure out how to set up an Apple Shortcut on their phone. What do you do?", options: [
+        { text: "You know someone who is great with Shortcuts - you'll send your parent/guardian to them for help.", points: 4 },
+        { text: "Find a YouTube tutorial for them to follow and sit with them if they have questions.", points: 2 },
+        { text: "Sit down with them and teach them step by step how to set one up.", points: 1 },
+        { text: "Go on a research deep-dive and send them everything you find that could help.", points: 3 },
+      ]},
+      { question: "Your friends describe you as:", options: [
+        { text: "Leader", points: 4 },
+        { text: "Friendly", points: 2 },
+        { text: "Creative", points: 3 },
+        { text: "Analytical", points: 1 },
+      ]},
+      { question: "How passionate are you about teaching others about technology?", options: [
+        { text: "Extremely passionate! People of all ages need to know about technology that can make their lives better.", points: 2 },
+        { text: "Pretty passionate - I may not be the best teacher, but I have a lot of ideas on how to increase digital literacy in our communities.", points: 4 },
+        { text: "Fairly passionate - when someone presents a problem to me that can be solved by technology, I share it with them.", points: 1 },
+        { text: "Not very passionate, but I know enough about technology that I could help increase digital literacy in our community in other ways.", points: 3 },
+      ]},
+    ];
+  
+    const form = document.getElementById("quizForm");
+  
+    questions.forEach((q, index) => {
+      const div = document.createElement("div");
+      div.classList.add("question");
+      div.innerHTML = `<h3>Q${index + 1}: ${q.question}</h3>`;
+      const optionsDiv = document.createElement("div");
+      optionsDiv.classList.add("options");
+      q.options.forEach((opt, i) => {
+        const name = `question${index}`;
+        const id = `${name}_opt${i}`;
+        optionsDiv.innerHTML += `
+          <input type="radio" name="${name}" id="${id}" value="${opt.points}">
+          <label for="${id}">${opt.text}</label>
+        `;
+      });
+      div.appendChild(optionsDiv);
+      form.appendChild(div);
     });
-    div.appendChild(optionsDiv);
-    form.appendChild(div);
-  });
-
-  document.getElementById("submit").addEventListener("click", function() {
-    const total = [...form.elements]
-      .filter(el => el.checked)
-      .reduce((sum, el) => sum + parseInt(el.value), 0);
-
-    if ([...form.elements].filter(el => el.checked).length < questions.length) {
-      document.getElementById("result").textContent = "Please answer all questions!";
-      return;
-    }
-
-  let resultText = "";
-    if (total <= 13) {
-      resultText = "You would be an amazing Mentor!" <br /> "Mentors pair with participants to offer one-on-one guidance in areas such as computer literacy, coding, or digital design.";
-    } else if (total <= 23) {
-      resultText = "You would be a fantastic Training Assistant!" <br /> "Training Assistants support Digital Navigators in running workshops, answering questions, or helping participants troubleshoot."
-;
-    } else if (total <= 33) {
-      resultText = "You would be a stellar Content Contributor!" <br /> "Content Contributors develop or refine curriculum and resources (e.g., creating guides, or translating materials).
-";
-    } else {
-      resultText = "You would be an awesome Project Advisor!" <br /> "Project Advisors provide expertise on specialized projects like AI for Seniors or Youth Digital Engagement initiatives.";
-    }
-
-    document.getElementById("result").textContent = resultText;
-  });
-</script>
+  
+    document.getElementById("submit").addEventListener("click", function() {
+      const total = [...form.elements]
+        .filter(el => el.checked)
+        .reduce((sum, el) => sum + parseInt(el.value), 0);
+  
+      if ([...form.elements].filter(el => el.checked).length < questions.length) {
+        document.getElementById("result").textContent = "Please answer all questions!";
+        return;
+      }
+  
+    let resultText = "";
+      if (total <= 13) {
+        resultText = "You would be an amazing Mentor!" <br /> "Mentors pair with participants to offer one-on-one guidance in areas such as computer literacy, coding, or digital design.";
+      } else if (total <= 23) {
+        resultText = "You would be a fantastic Training Assistant!" <br /> "Training Assistants support Digital Navigators in running workshops, answering questions, or helping participants troubleshoot."
+  ;
+      } else if (total <= 33) {
+        resultText = "You would be a stellar Content Contributor!" <br /> "Content Contributors develop or refine curriculum and resources (e.g., creating guides, or translating materials).
+  ";
+      } else {
+        resultText = "You would be an awesome Project Advisor!" <br /> "Project Advisors provide expertise on specialized projects like AI for Seniors or Youth Digital Engagement initiatives.";
+      }
+  
+      document.getElementById("result").textContent = resultText;
+    });
+  </script>
 
 </body>
 </html>
